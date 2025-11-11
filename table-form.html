@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблицы и формы</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <table class="table-example">
+        <caption>Счет</caption>
+        <thead>
+            <tr>
+                <th>Наименование</th>
+                <th>Цена</th>
+                <th>Колличество</th>
+                <th>Стоимость</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Шарф</td>
+                <td>700 &#8381;</td>
+                <td rowspan="2">2</td>
+                <td>1400 &#8381;</td>
+            </tr>
+            <tr>
+                <td>Шапка</td>
+                <td>1600 &#8381;</td>
+                <td>3200 &#8381;</td>
+            </tr>
+            <tr>
+                <td>Пальто</td>
+                <td>9000 &#8381;</td>
+                <td>1</td>
+                <td>9000 &#8381;</td>
+            </tr>
+            <tr>
+                <td colspan="3">Итого</td>
+                <td>13600 &#8381;</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form id="registration" action="">
+        <label for="login">Введите логин</label><br>
+        <input type="text" id="login" name="login" placeholder="Логин" required><br>
+        <label for="pass">Введите пароль</label><br>
+        <input type="password" id="pass" name="pass" placeholder="Пароль" required><br>
+        <input type="radio" id="radio-male" name="gender" checked>
+        <label for="radio-male">Мужской</label>
+        <input type="radio" id="radio-female" name="gender">
+        <label for="radio-female">Женский</label><br>
+
+        <label for="role">Выберите роль</label><br>
+        <select name="role" id="role" required>
+            <option value="student">Студент</option>
+            <option value="teacher">Учитель</option><br>
+            <option value="admin">Администратор</option>
+        </select><br>
+
+        <label for="comment">Комментарий</label><br>
+        <textarea name="comment" id="comment" rows="10" cols="12"></textarea><br>
+
+        <input type="submit" value="Зарегистрироваться">
+    </form>
+</body>
+
+</html>
